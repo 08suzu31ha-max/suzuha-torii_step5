@@ -1,0 +1,47 @@
+body{
+    font-family: sans-serif;
+    background-color: #f07ff;
+    padding: 30px;
+}
+
+input,
+button{
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#listArea p {
+     background-color: white;
+     padding: 10px;
+     margin: 8px 0;
+     border: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    background-color: white;
+}
+
+th,
+td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th{
+    backghround-color: #e5e5e5;
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: #ddd;
+}
+

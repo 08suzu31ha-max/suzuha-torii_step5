@@ -7,14 +7,28 @@
     </head>
     <body>
         <button id="button">背景色を変更</button>
-        <script src="style.js"></script>
+        <br>
 
         <input type="text" id="input" placeholder="文字を入力してください">
         <button id="display">表示</button>
         <button id="add">追加</button>
 
         <p>表示エリア</p>
-        <div id="displayArea"></div>
+        
+        <p id="count">現在の行数：０</p>
 
+        <table border="1">
+            <thead>
+            <tr>
+                <th>内容</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="listArea"></tbody>
+        </table>
+
+        <div id="listArea"></div>
+
+        <script src="style.js"></script> 
     </body>
 </html>
