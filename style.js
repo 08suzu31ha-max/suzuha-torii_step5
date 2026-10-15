@@ -33,9 +33,10 @@ displayButton.addEventListener("click", function(){
 const addButton = document. getElementById("add");
 
 addButton.addEventListener("click", function(){
-    const items = listArea.querySelectorAll("tr");
+    const items =listArea.querySelectorAll("tr");
+
     if(items.length >= 3){
-        return;
+        items[0].remove();
     }
 
     const text = input.value.trim();
@@ -64,9 +65,7 @@ addButton.addEventListener("click", function(){
     });
     listArea.appendChild(item);
     count.textContent = "現在の行数:" + listArea.querySelectorAll("tr").length;
-    if(listArea.querySelectorAll("tr").length >= 3) {
-        addButton.style.display = "none";
-    }
+   
 });
 
 for (let i = 1; i <= 5; i++){
