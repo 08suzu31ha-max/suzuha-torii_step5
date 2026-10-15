@@ -33,10 +33,11 @@ displayButton.addEventListener("click", function(){
 const addButton = document. getElementById("add");
 
 addButton.addEventListener("click", function(){
-    const items = listArea.querySelectorAll("p");
+    const items = listArea.querySelectorAll("tr");
     if(items.length >= 3){
-        items[0].remove();
+        return;
     }
+
     const text = input.value.trim();
     if (text === ""){
         alert("文字を入力してください");
@@ -56,10 +57,16 @@ addButton.addEventListener("click", function(){
 
     deleteButton.addEventListener("click", function(){
         item.remove();
-        count.textContent = "現在の行数 :" + listArea.querySelectorAll("p").length;
+        count.textContent = "現在の行数 :" + listArea.querySelectorAll("tr").length;
+        if(listArea.querySelectorAll("tr").length < 3) {
+            addButton.style.display = "";
+        }
     });
     listArea.appendChild(item);
-    count.textContent = "現在の行数:" + listArea.querySelectorAll("p").length;
+    count.textContent = "現在の行数:" + listArea.querySelectorAll("tr").length;
+    if(listArea.querySelectorAll("tr").length >= 3) {
+        addButton.style.display = "none";
+    }
 });
 
 for (let i = 1; i <= 5; i++){
